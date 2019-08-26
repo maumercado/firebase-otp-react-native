@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "^10.0.3",
     "eslint": "^4.16.0",
     "eslint-plugin-react": "^7.6.1",
     "jest-expo": "25.0.0",
