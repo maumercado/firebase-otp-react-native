@@ -1,0 +1,61 @@
+version: 2
+registries:
+  npm-registry-registry-npmjs-org:
+    type: npm-registry
+    url: https://registry.npmjs.org
+    username: "${{secrets.NPM_REGISTRY_REGISTRY_NPMJS_ORG_USERNAME}}"
+    password: "${{secrets.NPM_REGISTRY_REGISTRY_NPMJS_ORG_PASSWORD}}"
+
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "13:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: expo
+    versions:
+    - 40.0.1
+    - 41.0.0
+  - dependency-name: firebase
+    versions:
+    - 8.2.10
+    - 8.2.4
+    - 8.2.5
+    - 8.2.6
+    - 8.2.7
+    - 8.2.8
+    - 8.2.9
+    - 8.3.0
+    - 8.3.1
+    - 8.3.2
+    - 8.3.3
+    - 8.4.1
+  - dependency-name: eslint
+    versions:
+    - 7.18.0
+    - 7.19.0
+    - 7.20.0
+    - 7.21.0
+    - 7.22.0
+    - 7.23.0
+    - 7.24.0
+  - dependency-name: eslint-plugin-react
+    versions:
+    - 7.22.0
+    - 7.23.0
+    - 7.23.1
+  - dependency-name: react-native
+    versions:
+    - 0.62.2
+    - 0.63.4
+  - dependency-name: jest-expo
+    versions:
+    - 37.0.0
+    - 40.0.2
+  - dependency-name: react-test-renderer
+    versions:
+    - 16.13.1
+  registries:
+  - npm-registry-registry-npmjs-org
